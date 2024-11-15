@@ -28,4 +28,4 @@
 
 ## 🚀 Cómo Visualizar el Proyecto
 
-Puedes acceder al proyecto directamente desde este enlace https://mia-crochet.netlify.app/. 
+Puedes acceder al proyecto directamente desde <a href="https://www.ejemplo.com" target="_blank">este enlace</a>. 
