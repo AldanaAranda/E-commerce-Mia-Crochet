@@ -1,0 +1,301 @@
+body{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f87cc2;
+    padding: 0;
+    padding: 1% 0 1% 0;
+    width: 100%;
+    color: #fff;
+    z-index: 1;
+    top: 0;
+    position: fixed;
+}
+
+.navbar-titulo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-left: 5%;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    padding: 0;
+}
+
+.hamburguesa {
+    font-size: 1.8rem;
+    cursor: pointer;
+    display: none;
+    margin-right: 7%;
+    color: #fff;
+}
+
+.menu-hamburguesa {
+    display: none;
+}
+
+.navbar-menu li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0 90px;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-menu{
+    background-color: #f87cc2;
+}
+
+.carousel{
+    margin-top: 45px;
+    z-index: 0;
+}
+
+main{
+    background-color: #ffe9fe;
+}
+
+section{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 5%;
+}
+
+.animales,
+.personajes,
+.famosos{
+    position: relative;
+    width: 30%;
+    margin-top: 10%;
+    overflow: hidden;
+    filter: grayscale(50%);
+    transition: transform 0.3s;
+}
+
+.animales-overlay,
+.personajes-overlay,
+.famosos-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo{
+    text-shadow: 1px 1px 1px black;
+    color: white;
+}
+
+.animales:hover,
+.personajes:hover,
+.famosos:hover{
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
+
+.resenas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 10%;
+}
+
+.resena {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.resena h3 {
+    margin-bottom: 10px;
+}
+
+.resena p {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+label {
+    font-size: 1.1em;
+    color: #333;
+}
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #f87cc2;
+    color: #fff;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer{
+    width: 100%;
+    padding: 5% 0 3% 0;
+    background-color: #f87cc2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.nosotros{
+    width: 40%;
+}
+
+.footer-img,
+.footer-redes{
+    width: 30%;
+    text-align: center;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 7%;
+}
+
+.social-icon{
+    font-size: 30px;
+    color: #333;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.cards{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 5% 0 5% 0;
+}
+
+.card{
+    margin: 2%;
+    border: solid rgb(180, 180, 180) 1px;
+    border-radius: 3%;
+}
+
+.card-img{
+    border-radius: 3% 3% 0 0;
+}
+
+.card-body{
+    text-align: center;
+}
+
+.boton {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #f87cc2;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+
+@media (max-width: 768px){
+    h1 {
+        font-size: 1.2em;
+    }
+    label {
+        font-size: 0.9em;
+    }
+    input, textarea {
+        padding: 6px;
+    }
+    button {
+        font-size: 0.9em;
+    }
+
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 45px;
+        right: 0;
+        padding: 0 0 4% 0;
+        background-color: #f87cc2;
+        width: 100%;
+        text-align: center;
+        z-index: 2;
+    }
+
+    .hamburguesa {
+        display: block;
+    }
+
+    .menu-hamburguesa:checked + .hamburguesa + .navbar-menu {
+        display: flex;
+    }
+
+    .animales,
+    .personajes,
+    .famosos{
+        width: 75%;
+        margin: 5% 0 5% 0;
+    }
+
+    .resenas-grid {
+        grid-template-columns: 1fr;
+        margin-bottom: 15%;
+    }
+
+    .cards{
+        padding-top: 20%;
+    }
+
+    .card{
+        margin-top: 10%;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .nosotros,
+    .footer-img,
+    .footer-redes {
+        width: 90%;
+        margin-bottom: 5%;
+    }
+
+    .social-icons {
+        margin: 0;
+    }
+}
