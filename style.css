@@ -193,6 +193,12 @@ footer{
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
+.privacy-policy{
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
+}
+
 .cards{
     display: flex;
     justify-content: space-around;
